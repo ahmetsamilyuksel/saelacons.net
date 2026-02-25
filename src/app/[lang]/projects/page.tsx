@@ -4,12 +4,12 @@ import { getDictionary } from "@/i18n/dictionaries";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 
 const projectImages = [
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
-  "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+  "/images/generated-A1azJgGgpnS8EqMN.png",
+  "/images/generated-A1azJr0eykcPZJJZ.png",
+  "/images/generated-A1azJr8L2pS81Q9R.png",
+  "/images/generated-A1azJrXvJWIENJE0.png",
+  "/images/generated-AMqD4pBwa7s6lL1k.png",
+  "/images/generated-AVLxbD2jzjTxvPwO.png",
 ];
 
 const years = ["2025", "2025", "2024", "2024", "2024", "2025"];
@@ -38,7 +38,7 @@ export default async function ProjectsPage({
       {/* Page Header */}
       <section className="relative bg-navy-dark py-32 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+          src="/images/generated-ALp2obgoRjH935QN.png"
           alt="Interior renovation"
           fill
           className="object-cover opacity-20"
