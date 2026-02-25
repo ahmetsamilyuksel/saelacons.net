@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -42,8 +43,17 @@ export default async function HomePage({
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-dark" />
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+          alt="Luxury interior"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-navy-dark/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy-dark/60 to-transparent" />
 
         {/* Animated grid overlay */}
         <div className="absolute inset-0 opacity-[0.03]"
@@ -53,10 +63,6 @@ export default async function HomePage({
             backgroundSize: "60px 60px",
           }}
         />
-
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 -right-32 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-gold/5 rounded-full blur-[100px]" />
 
         <HeroParticles />
 
@@ -80,7 +86,7 @@ export default async function HomePage({
             </AnimatedSection>
 
             <AnimatedSection delay={0.6}>
-              <p className="mt-8 text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl">
+              <p className="mt-8 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
                 {dict.hero.subtitle}
               </p>
             </AnimatedSection>
@@ -136,9 +142,19 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* Featured Image Banner */}
+      <section className="relative h-[50vh] overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+          alt="Modern interior design"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-transparent to-navy-dark" />
+      </section>
+
       {/* Services Preview */}
       <section className="relative bg-navy-dark py-28 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <span className="text-gold text-sm font-semibold uppercase tracking-widest">
@@ -233,20 +249,29 @@ export default async function HomePage({
 
             <AnimatedSection direction="right" delay={0.3}>
               <div className="relative">
-                <div className="gradient-border">
-                  <div className="glass rounded-2xl p-10">
-                    <div className="flex items-center gap-3 mb-6">
+                {/* Image card */}
+                <div className="relative rounded-2xl overflow-hidden img-zoom">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                    alt="Interior design project"
+                    width={600}
+                    height={450}
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <div className="flex items-center gap-3 mb-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
                         <span className="text-navy-dark font-bold">S</span>
                       </div>
                       <h3 className="text-2xl font-bold text-white">Saelacons</h3>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
                       {dict.about.description}
                     </p>
                     <Link
                       href={`/${lang}/about`}
-                      className="inline-flex items-center mt-8 text-gold font-semibold hover:text-gold-light transition-colors group"
+                      className="inline-flex items-center mt-4 text-gold font-semibold hover:text-gold-light transition-colors group"
                     >
                       {dict.hero.learnMore}
                       <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -255,7 +280,7 @@ export default async function HomePage({
                     </Link>
                   </div>
                 </div>
-                {/* Decorative element */}
+                {/* Decorative elements */}
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/20 rounded-2xl -z-10" />
                 <div className="absolute -top-4 -left-4 w-16 h-16 border border-gold/10 rounded-xl -z-10" />
               </div>
@@ -266,16 +291,22 @@ export default async function HomePage({
 
       {/* CTA Section */}
       <section className="relative py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-dark" />
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+          alt="Construction"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-navy-dark/85" />
         <div className="absolute inset-0 particle-bg" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-5xl font-bold text-white">
               {dict.hero.cta}
             </h2>
-            <p className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
               {dict.hero.subtitle}
             </p>
             <Link

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -34,16 +35,13 @@ export default async function AboutPage({
     <>
       {/* Page Header */}
       <section className="relative bg-navy-dark py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-dark" />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1920&q=80"
+          alt="Modern architecture"
+          fill
+          className="object-cover opacity-20"
         />
-        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-gold/8 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/50 via-navy-dark/80 to-navy-dark" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
@@ -61,16 +59,28 @@ export default async function AboutPage({
         </div>
       </section>
 
-      {/* Description */}
+      {/* Description with Image */}
       <section className="bg-navy py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <div className="max-w-3xl mx-auto text-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection direction="left">
               <p className="text-lg text-gray-300 leading-relaxed">
                 {dict.about.description}
               </p>
-            </div>
-          </AnimatedSection>
+            </AnimatedSection>
+            <AnimatedSection direction="right" delay={0.2}>
+              <div className="relative rounded-2xl overflow-hidden img-zoom">
+                <Image
+                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+                  alt="Our work"
+                  width={600}
+                  height={400}
+                  className="w-full h-[350px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/50 to-transparent" />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
