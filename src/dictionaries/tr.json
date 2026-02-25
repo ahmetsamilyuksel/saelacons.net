@@ -130,7 +130,10 @@
       "phone": "Telefon Numaranız",
       "subject": "Tadilat Türü",
       "message": "Projeniz Hakkında Bilgi",
-      "send": "Teklif İste"
+      "send": "Teklif İste",
+      "sending": "Gönderiliyor...",
+      "success": "Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.",
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
     },
     "info": {
       "address": "Adres",

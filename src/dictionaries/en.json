@@ -130,7 +130,10 @@
       "phone": "Phone Number",
       "subject": "Renovation Type",
       "message": "About Your Project",
-      "send": "Request a Quote"
+      "send": "Request a Quote",
+      "sending": "Sending...",
+      "success": "Your message has been sent! We'll get back to you shortly.",
+      "error": "Something went wrong. Please try again."
     },
     "info": {
       "address": "Address",
