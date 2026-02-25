@@ -17,7 +17,6 @@ interface HeaderProps {
       services: string;
       projects: string;
       contact: string;
-      pricing?: string;
     };
   };
 }
@@ -40,7 +39,6 @@ export default function Header({ lang, dict }: HeaderProps) {
     { href: `/${lang}/about`, label: dict.nav.about },
     { href: `/${lang}/services`, label: dict.nav.services },
     { href: `/${lang}/projects`, label: dict.nav.projects },
-    { href: `/${lang}/pricing`, label: dict.nav.pricing || "Pricing" },
     { href: `/${lang}/contact`, label: dict.nav.contact },
   ];
 
@@ -67,9 +65,9 @@ export default function Header({ lang, dict }: HeaderProps) {
             <Image
               src="/images/amin logo arka plan şeffaf 3d.png"
               alt="Saelacons Logo"
-              width={48}
-              height={48}
-              className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+              width={64}
+              height={64}
+              className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="text-xl font-bold tracking-wider text-white">
               {lang === "ru" ? "САЭЛА" : "SAELA"}{lang !== "ru" && <span className="text-gold">CONS</span>}
