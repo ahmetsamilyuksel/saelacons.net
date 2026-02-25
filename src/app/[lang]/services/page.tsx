@@ -1,5 +1,6 @@
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 
 const serviceIcons: Record<string, string> = {
   projectManagement:
@@ -15,6 +16,8 @@ const serviceIcons: Record<string, string> = {
   design:
     "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z",
 };
+
+const serviceNumbers = ["01", "02", "03", "04", "05", "06"];
 
 export default async function ServicesPage({
   params,
@@ -33,50 +36,81 @@ export default async function ServicesPage({
   return (
     <>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold">
-            {dict.services.title}
-          </h1>
-          <p className="mt-4 text-xl text-gray-300 max-w-2xl">
-            {dict.services.subtitle}
-          </p>
+      <section className="relative bg-navy-dark py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-dark via-navy to-navy-dark" />
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold/8 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection>
+            <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+              Saelacons
+            </span>
+            <h1 className="mt-4 text-4xl sm:text-6xl font-bold text-white">
+              {dict.services.title}
+            </h1>
+            <p className="mt-6 text-xl text-gray-400 max-w-2xl leading-relaxed">
+              {dict.services.subtitle}
+            </p>
+            <div className="gold-line mt-8" />
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="bg-white py-24">
+      <section className="bg-navy py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(servicesList).map(([key, service]) => (
-              <div
-                key={key}
-                className="border border-gray-100 rounded-xl p-8 hover:shadow-lg transition-shadow group"
-              >
-                <div className="w-14 h-14 bg-blue-50 text-blue-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-900 group-hover:text-white transition-colors">
-                  <svg
-                    className="w-7 h-7"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d={serviceIcons[key] || serviceIcons.consulting}
-                    />
-                  </svg>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
+            {Object.entries(servicesList).map(([key, service], index) => (
+              <StaggerItem key={key}>
+                <div className="group glass rounded-2xl p-8 card-hover h-full relative overflow-hidden">
+                  {/* Background number */}
+                  <span className="absolute -top-4 -right-2 text-[120px] font-bold text-white/[0.02] leading-none select-none">
+                    {serviceNumbers[index] || "00"}
+                  </span>
+
+                  <div className="relative">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                        <svg
+                          className="w-7 h-7"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d={serviceIcons[key] || serviceIcons.consulting}
+                          />
+                        </svg>
+                      </div>
+                      <span className="text-gold/30 text-sm font-mono">
+                        {serviceNumbers[index] || "00"}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gold transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Hover line */}
+                    <div className="mt-6 w-0 group-hover:w-full h-px bg-gradient-to-r from-gold to-transparent transition-all duration-500" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
     </>
