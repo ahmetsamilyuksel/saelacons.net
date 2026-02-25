@@ -7,118 +7,130 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Your Trusted Partner in Construction and Engineering Consulting",
-    "subtitle": "At Saelacons, we bring your projects to life with the highest quality standards. We are by your side with our international experience and expert team.",
-    "cta": "Contact Us",
+    "title": "Professional Renovation and Finishing Services in Moscow",
+    "subtitle": "SAELACONS delivers premium renovation services for apartments, cafes, retail spaces, and commercial properties. Quality materials, expert team, on-time delivery.",
+    "cta": "Get a Free Estimate",
     "learnMore": "Learn More"
   },
   "home": {
     "servicesTitle": "Our Services",
-    "servicesSubtitle": "We offer a wide range of professional consulting services",
-    "projectsTitle": "Featured Projects",
-    "projectsSubtitle": "Some of our successfully completed projects",
-    "whyUsTitle": "Why Saelacons?",
+    "servicesSubtitle": "Turnkey renovation solutions for apartments, cafes, and commercial spaces",
+    "projectsTitle": "Completed Projects",
+    "projectsSubtitle": "Examples of our renovation work across Moscow",
+    "whyUsTitle": "Why SAELACONS?",
     "stats": {
       "projects": "Completed Projects",
-      "experience": "Years of Experience",
+      "area": "m² Renovated",
       "clients": "Happy Clients",
-      "countries": "Countries of Operation"
+      "team": "Expert Team Members"
     },
-    "viewAll": "View All"
+    "viewAll": "View All Services"
   },
   "about": {
     "title": "About Us",
-    "subtitle": "Saelacons — Trusted Engineering Consultancy",
-    "description": "LLC «SAELA» (Saelacons) is a Moscow-based firm providing consulting services in the construction and engineering sector at international standards. With our experienced team of engineers, we are with you at every stage of your projects.",
+    "subtitle": "SAELACONS — Your Trusted Renovation Partner in Moscow",
+    "description": "LLC «SAELA» (SAELACONS) is a professional renovation company based in Moscow, specializing in apartment, cafe, restaurant, and commercial space renovations. With our experienced team of craftsmen and commitment to quality materials, we transform living and working spaces into the places you've always envisioned. We stand out through our meticulous attention to detail and client-first approach in every project.",
     "mission": "Our Mission",
-    "missionText": "To bring our clients' projects to life with the highest standards of quality, safety, and sustainability.",
+    "missionText": "To transform every space into the comfort and aesthetic its owner dreams of. To deliver quality renovations on budget and on time, without compromise.",
     "vision": "Our Vision",
-    "visionText": "To become a leading firm in the international arena of construction consultancy and to offer innovative solutions to the industry.",
+    "visionText": "To become Moscow's most trusted and preferred renovation company, representing the quality of Turkish craftsmanship in Russia.",
     "values": "Our Values",
     "valuesList": {
-      "quality": "Quality",
-      "qualityText": "We aim for the highest standards in every project.",
+      "quality": "Quality Craftsmanship",
+      "qualityText": "We pursue excellence in every detail. Our finishing work sets us apart.",
       "trust": "Reliability",
-      "trustText": "We build trust with transparent and honest business processes.",
-      "innovation": "Innovation",
-      "innovationText": "We make a difference with modern technology and methods.",
-      "sustainability": "Sustainability",
-      "sustainabilityText": "We create environmentally conscious, future-oriented solutions."
+      "trustText": "We deliver on the promised date, at the promised quality.",
+      "innovation": "Modern Approach",
+      "innovationText": "We work with current design trends and premium materials.",
+      "sustainability": "Transparent Pricing",
+      "sustainabilityText": "No hidden costs. Clear pricing from the start, no surprises."
     }
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "Comprehensive engineering and consulting solutions",
+    "subtitle": "From apartments to cafes, retail to restaurants — professional renovation for every space",
     "list": {
-      "projectManagement": {
-        "title": "Project Management",
-        "description": "We professionally manage all processes of your projects from start to completion."
+      "apartmentRenovation": {
+        "title": "Apartment Renovation",
+        "description": "Complete or partial renovation from studios to large apartments. Walls, floors, ceilings, painting, plastering, and all finishing work included."
       },
-      "structuralEngineering": {
-        "title": "Structural Engineering",
-        "description": "We offer detailed structural analysis and design services for safe and durable structures."
+      "commercialRenovation": {
+        "title": "Commercial Space Renovation",
+        "description": "Store, office, and mall interior renovations. We create modern, functional spaces that impress your customers."
       },
-      "qualityControl": {
-        "title": "Quality Control",
-        "description": "We provide quality control and inspection services compliant with international standards."
+      "cafeRestaurant": {
+        "title": "Cafe & Restaurant Renovation",
+        "description": "Atmosphere-creating interior design and implementation. Turnkey cafe and restaurant renovation including kitchen areas."
       },
-      "consulting": {
-        "title": "Technical Consulting",
-        "description": "We provide comprehensive technical consulting and feasibility studies for your construction projects."
+      "finishingWork": {
+        "title": "Finishing Work",
+        "description": "Painting, drywall, ceramic tiles, parquet, wallpaper, and decorative coatings. Flawless results with a detail-oriented approach."
       },
-      "supervision": {
-        "title": "Site Supervision",
-        "description": "We supervise construction site processes for compliance with safety and quality standards."
+      "bathroomKitchen": {
+        "title": "Bathroom & Kitchen Renovation",
+        "description": "Full bathroom and kitchen remodeling. Plumbing, tiling, cabinet installation, and all details included."
       },
-      "design": {
-        "title": "Design Services",
-        "description": "We offer modern and functional architectural and engineering design solutions."
+      "designPlanning": {
+        "title": "Design & Planning",
+        "description": "Free on-site assessment and project planning for your space. We offer design recommendations tailored to your needs."
       }
     }
   },
   "projects": {
     "title": "Our Projects",
-    "subtitle": "Successfully completed projects",
+    "subtitle": "Examples of our completed renovation projects",
     "category": "Category",
     "location": "Location",
     "year": "Year",
     "list": {
       "project1": {
-        "title": "Residential Complex",
-        "description": "Project management and supervision of a modern 500-unit residential complex.",
-        "category": "Residential",
-        "location": "Istanbul, Turkey"
+        "title": "3-Bedroom Apartment Renovation",
+        "description": "Complete renovation of an 85 m² apartment: flooring, wall painting, bathroom and kitchen remodeling, lighting and electrical work.",
+        "category": "Apartment",
+        "location": "Presnensky, Moscow"
       },
       "project2": {
-        "title": "Shopping Center",
-        "description": "Structural engineering consultancy for a 30,000 m² enclosed shopping center.",
-        "category": "Commercial",
-        "location": "Moscow, Russia"
+        "title": "Boutique Cafe Interior Design",
+        "description": "Full interior creation for a 120 m² cafe space. Industrial-modern style with custom lighting and furniture layout.",
+        "category": "Cafe",
+        "location": "Arbat, Moscow"
       },
       "project3": {
-        "title": "Industrial Facility",
-        "description": "Quality control and inspection service for an international standards industrial facility.",
-        "category": "Industrial",
-        "location": "Ankara, Turkey"
+        "title": "Mall Retail Space Renovation",
+        "description": "Modern store concept for a 200 m² retail space. Storefront design, flooring, ceiling work, and lighting system.",
+        "category": "Commercial",
+        "location": "Aviapark, Moscow"
       },
       "project4": {
-        "title": "Infrastructure Project",
-        "description": "Technical consulting service for urban infrastructure renovation project.",
-        "category": "Infrastructure",
-        "location": "Baku, Azerbaijan"
+        "title": "Studio Apartment Modernization",
+        "description": "Complete renovation of a 42 m² studio with smart space utilization. Minimalist design with integrated storage solutions.",
+        "category": "Apartment",
+        "location": "Khamovniki, Moscow"
+      },
+      "project5": {
+        "title": "Restaurant Renovation Project",
+        "description": "Complete renovation of a 180 m² restaurant space including kitchen area, with a modern Russian-Turkish fusion concept.",
+        "category": "Restaurant",
+        "location": "Patriarch's Ponds, Moscow"
+      },
+      "project6": {
+        "title": "Modern Office Renovation",
+        "description": "Modern workspace creation in a 150 m² office space. Open plan layout, meeting rooms, and break area.",
+        "category": "Office",
+        "location": "Moscow-City, Moscow"
       }
     }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Get in touch with us for your projects",
+    "subtitle": "Reach out for a free assessment and price quote",
     "form": {
       "name": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number",
-      "subject": "Subject",
-      "message": "Your Message",
-      "send": "Send"
+      "subject": "Renovation Type",
+      "message": "About Your Project",
+      "send": "Request a Quote"
     },
     "info": {
       "address": "Address",
@@ -130,7 +142,7 @@
     }
   },
   "footer": {
-    "description": "Saelacons — Your trusted partner in construction and engineering consulting.",
+    "description": "SAELACONS — Your trusted partner for apartment, cafe, and commercial renovation in Moscow.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Info",
     "rights": "All rights reserved."

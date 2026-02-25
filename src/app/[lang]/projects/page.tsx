@@ -8,9 +8,11 @@ const projectImages = [
   "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
   "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
   "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
 ];
 
-const years = ["2024", "2023", "2022", "2021"];
+const years = ["2025", "2025", "2024", "2024", "2024", "2025"];
 
 export default async function ProjectsPage({
   params,
@@ -36,8 +38,8 @@ export default async function ProjectsPage({
       {/* Page Header */}
       <section className="relative bg-navy-dark py-32 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80"
-          alt="Architecture"
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+          alt="Interior renovation"
           fill
           className="object-cover opacity-20"
         />
@@ -46,7 +48,7 @@ export default async function ProjectsPage({
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <span className="text-gold text-sm font-semibold uppercase tracking-widest">
-              Portfolio
+              {lang === "ru" ? "Портфолио" : "Portfolio"}
             </span>
             <h1 className="mt-4 text-4xl sm:text-6xl font-bold text-white">
               {dict.projects.title}
@@ -62,7 +64,7 @@ export default async function ProjectsPage({
       {/* Projects Grid */}
       <section className="bg-navy py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid md:grid-cols-2 gap-8" staggerDelay={0.15}>
+          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.15}>
             {Object.entries(projectsList).map(([key, project], index) => (
               <StaggerItem key={key}>
                 <div className="group glass rounded-2xl overflow-hidden card-hover">
@@ -79,21 +81,21 @@ export default async function ProjectsPage({
                     {/* Year badge */}
                     <div className="absolute top-4 right-4 glass px-3 py-1 rounded-full">
                       <span className="text-xs font-mono text-gold">
-                        {years[index] || "2021"}
+                        {years[index] || "2024"}
                       </span>
                     </div>
                   </div>
 
-                  <div className="p-8">
+                  <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1.5 rounded-full">
                         {project.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gold transition-colors">
+                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gold transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed text-sm mb-4">
                       {project.description}
                     </p>
                     <div className="flex items-center text-sm text-gray-500">

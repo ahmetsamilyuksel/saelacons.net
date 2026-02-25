@@ -17,24 +17,24 @@ export default async function HomePage({
 
   const services = [
     {
-      key: "projectManagement",
-      icon: "M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4",
+      key: "apartmentRenovation",
+      icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1m-2 0h2",
     },
     {
-      key: "structuralEngineering",
+      key: "cafeRestaurant",
       icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
     },
     {
-      key: "qualityControl",
-      icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+      key: "finishingWork",
+      icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
     },
   ];
 
   const stats = [
-    { value: 150, suffix: "+", label: dict.home.stats.projects },
-    { value: 15, suffix: "+", label: dict.home.stats.experience },
-    { value: 120, suffix: "+", label: dict.home.stats.clients },
-    { value: 5, suffix: "+", label: dict.home.stats.countries },
+    { value: 30, suffix: "+", label: dict.home.stats.projects },
+    { value: 3500, suffix: "+", label: dict.home.stats.area },
+    { value: 25, suffix: "+", label: dict.home.stats.clients },
+    { value: 15, suffix: "+", label: dict.home.stats.team },
   ];
 
   const serviceDict = dict.services.list as Record<string, { title: string; description: string }>;
@@ -71,17 +71,17 @@ export default async function HomePage({
             <AnimatedSection delay={0.2}>
               <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-gold text-sm mb-8">
                 <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-                SAELACONS
+                {lang === "ru" ? "ООО «САЭЛА»" : "SAELACONS"}
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.4}>
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white">
-                {dict.hero.title.split(" ").slice(0, 3).join(" ")}{" "}
+                {dict.hero.title.split(" ").slice(0, 2).join(" ")}{" "}
                 <span className="gradient-text">
-                  {dict.hero.title.split(" ").slice(3, 5).join(" ")}
+                  {dict.hero.title.split(" ").slice(2, 4).join(" ")}
                 </span>{" "}
-                {dict.hero.title.split(" ").slice(5).join(" ")}
+                {dict.hero.title.split(" ").slice(4).join(" ")}
               </h1>
             </AnimatedSection>
 
@@ -103,7 +103,7 @@ export default async function HomePage({
                   </svg>
                 </Link>
                 <Link
-                  href={`/${lang}/about`}
+                  href={`/${lang}/services`}
                   className="inline-flex items-center gap-2 px-8 py-4 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
                 >
                   {dict.hero.learnMore}
@@ -264,7 +264,9 @@ export default async function HomePage({
                       <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
                         <span className="text-navy-dark font-bold">S</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white">Saelacons</h3>
+                      <h3 className="text-2xl font-bold text-white">
+                        {lang === "ru" ? "ООО «САЭЛА»" : "SAELACONS"}
+                      </h3>
                     </div>
                     <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
                       {dict.about.description}
@@ -294,7 +296,7 @@ export default async function HomePage({
         {/* Background Image */}
         <Image
           src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
-          alt="Construction"
+          alt="Renovation"
           fill
           className="object-cover"
         />

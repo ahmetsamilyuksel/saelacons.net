@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0f;
+  --background: #0a1020;
   --foreground: #f5f5f7;
   --gold: #c9a84c;
   --gold-light: #e8d48b;
   --gold-dark: #a08339;
-  --navy: #0d1b2a;
-  --navy-light: #1b2d45;
-  --navy-dark: #070f18;
+  --navy: #0f1d35;
+  --navy-light: #1a3050;
+  --navy-dark: #081428;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .glass-dark {
-  background: rgba(10, 10, 15, 0.7);
+  background: rgba(8, 20, 40, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.05);

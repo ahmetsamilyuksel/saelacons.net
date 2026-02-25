@@ -6,9 +6,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Saelacons — İnşaat ve Mühendislik Danışmanlığı",
+  title: "SAELACONS — Ремонт квартир, кафе и коммерческих помещений в Москве",
   description:
-    "Saelacons, inşaat ve mühendislik sektöründe uluslararası standartlarda danışmanlık hizmeti sunan bir firmadır.",
+    "ООО «САЭЛА» (SAELACONS) — профессиональный ремонт и отделка квартир, кафе, ресторанов и коммерческих помещений в Москве. Качественные материалы, опытная команда, сдача в срок.",
 };
 
 export async function generateStaticParams() {
