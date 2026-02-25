@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Locale } from "@/i18n/config";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -21,7 +22,16 @@ interface HeaderProps {
 
 export default function Header({ lang, dict }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { href: `/${lang}`, label: dict.nav.home },
@@ -37,72 +47,127 @@ export default function Header({ lang, dict }: HeaderProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "glass-dark shadow-lg shadow-black/20"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href={`/${lang}`} className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+          {/* Logo */}
+          <Link href={`/${lang}`} className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold to-gold-dark rounded-lg transform group-hover:rotate-6 transition-transform duration-300" />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <span className="text-navy-dark font-bold text-lg">S</span>
+              </div>
             </div>
-            <span className="text-xl font-bold text-gray-900">SAELACONS</span>
+            <span className="text-xl font-bold tracking-wider text-white">
+              SAELA<span className="text-gold">CONS</span>
+            </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(link.href)
-                    ? "text-blue-900"
-                    : "text-gray-600 hover:text-blue-900"
-                }`}
+                className="relative px-4 py-2 text-sm font-medium transition-colors group"
               >
-                {link.label}
+                <span
+                  className={`relative z-10 ${
+                    isActive(link.href)
+                      ? "text-gold"
+                      : "text-gray-300 group-hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </span>
+                {isActive(link.href) && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-gold to-gold-dark"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
               </Link>
             ))}
-            <LanguageSwitcher lang={lang} />
+            <div className="ml-4 pl-4 border-l border-white/10">
+              <LanguageSwitcher lang={lang} />
+            </div>
           </nav>
 
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            <div className="relative w-6 h-5">
+              <motion.span
+                animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                className="absolute top-0 left-0 w-full h-0.5 bg-white block"
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                animate={mobileMenuOpen ? { opacity: 0, x: 20 } : { opacity: 1, x: 0 }}
+                className="absolute top-2 left-0 w-full h-0.5 bg-white block"
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                animate={mobileMenuOpen ? { rotate: -45, y: -12 } : { rotate: 0, y: 0 }}
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-white block"
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </button>
         </div>
       </div>
 
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
-          <div className="px-4 py-4 space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block text-sm font-medium py-2 ${
-                  isActive(link.href)
-                    ? "text-blue-900"
-                    : "text-gray-600"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="pt-2 border-t border-gray-100">
-              <LanguageSwitcher lang={lang} />
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden glass-dark overflow-hidden"
+          >
+            <div className="px-4 py-6 space-y-1">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05, duration: 0.3 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block text-base font-medium py-3 px-4 rounded-lg transition-colors ${
+                      isActive(link.href)
+                        ? "text-gold bg-white/5"
+                        : "text-gray-300 hover:text-white hover:bg-white/5"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+              <div className="pt-4 px-4 border-t border-white/10">
+                <LanguageSwitcher lang={lang} />
+              </div>
             </div>
-          </div>
-        </div>
-      )}
-    </header>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
   );
 }

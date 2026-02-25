@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import AnimatedSection, { StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import HeroParticles from "@/components/HeroParticles";
+import CountUpNumber from "@/components/CountUpNumber";
 
 export default async function HomePage({
   params,
@@ -13,36 +17,24 @@ export default async function HomePage({
 
   const services = [
     {
-      key: "projectManagement",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-      ),
+      key: "apartmentRenovation",
+      icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1m-2 0h2",
     },
     {
-      key: "structuralEngineering",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
+      key: "cafeRestaurant",
+      icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
     },
     {
-      key: "qualityControl",
-      icon: (
-        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
+      key: "finishingWork",
+      icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
     },
   ];
 
   const stats = [
-    { value: "150+", label: dict.home.stats.projects },
-    { value: "15+", label: dict.home.stats.experience },
-    { value: "120+", label: dict.home.stats.clients },
-    { value: "5+", label: dict.home.stats.countries },
+    { value: 30, suffix: "+", label: dict.home.stats.projects },
+    { value: 3500, suffix: "+", label: dict.home.stats.area },
+    { value: 25, suffix: "+", label: dict.home.stats.clients },
+    { value: 15, suffix: "+", label: dict.home.stats.team },
   ];
 
   const serviceDict = dict.services.list as Record<string, { title: string; description: string }>;
@@ -50,163 +42,285 @@ export default async function HomePage({
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              {dict.hero.title}
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-              {dict.hero.subtitle}
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href={`/${lang}/contact`}
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                {dict.hero.cta}
-              </Link>
-              <Link
-                href={`/${lang}/about`}
-                className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
-              >
-                {dict.hero.learnMore}
-              </Link>
-            </div>
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+          alt="Luxury interior"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-navy-dark/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy-dark/60 to-transparent" />
+
+        {/* Animated grid overlay */}
+        <div className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(201,168,76,0.3) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(201,168,76,0.3) 1px, transparent 1px)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+
+        <HeroParticles />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 w-full">
+          <div className="max-w-4xl">
+            <AnimatedSection delay={0.2}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-gold text-sm mb-8">
+                <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
+                {lang === "ru" ? "ООО «САЭЛА»" : "SAELACONS"}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.4}>
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white">
+                {dict.hero.title.split(" ").slice(0, 2).join(" ")}{" "}
+                <span className="gradient-text">
+                  {dict.hero.title.split(" ").slice(2, 4).join(" ")}
+                </span>{" "}
+                {dict.hero.title.split(" ").slice(4).join(" ")}
+              </h1>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.6}>
+              <p className="mt-8 text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                {dict.hero.subtitle}
+              </p>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.8}>
+              <div className="mt-12 flex flex-wrap gap-4">
+                <Link
+                  href={`/${lang}/contact`}
+                  className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold rounded-xl btn-glow transition-all hover:shadow-lg hover:shadow-gold/20"
+                >
+                  {dict.hero.cta}
+                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href={`/${lang}/services`}
+                  className="inline-flex items-center gap-2 px-8 py-4 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
+                >
+                  {dict.hero.learnMore}
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
+            <div className="w-1.5 h-3 bg-gold/60 rounded-full mt-1.5 animate-bounce" />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="relative bg-navy-dark py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-navy" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.15}>
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-blue-900">
-                  {stat.value}
+              <StaggerItem key={stat.label}>
+                <div className="text-center glass rounded-2xl p-8">
+                  <div className="text-4xl sm:text-5xl font-bold gradient-text">
+                    <CountUpNumber target={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <div className="mt-3 text-sm text-gray-400 font-medium tracking-wide uppercase">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="mt-2 text-sm text-gray-500 font-medium">
-                  {stat.label}
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              {dict.home.servicesTitle}
-            </h2>
-            <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-              {dict.home.servicesSubtitle}
-            </p>
-          </div>
+      {/* Featured Image Banner */}
+      <section className="relative h-[50vh] overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+          alt="Modern interior design"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark via-transparent to-navy-dark" />
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
+      {/* Services Preview */}
+      <section className="relative bg-navy-dark py-28 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+              {dict.home.servicesTitle}
+            </span>
+            <h2 className="mt-4 text-3xl sm:text-5xl font-bold text-white">
+              {dict.home.servicesSubtitle}
+            </h2>
+            <div className="gold-line mx-auto mt-6" />
+          </AnimatedSection>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
             {services.map((service) => {
               const s = serviceDict[service.key];
               return (
-                <div
-                  key={service.key}
-                  className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="w-14 h-14 bg-blue-50 text-blue-900 rounded-lg flex items-center justify-center mb-6">
-                    {service.icon}
+                <StaggerItem key={service.key}>
+                  <div className="group glass rounded-2xl p-8 card-hover h-full">
+                    <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={service.icon} />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gold transition-colors">
+                      {s.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed">
+                      {s.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {s.title}
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed">
-                    {s.description}
-                  </p>
-                </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerContainer>
 
-          <div className="text-center mt-12">
+          <AnimatedSection className="text-center mt-12">
             <Link
               href={`/${lang}/services`}
-              className="inline-flex items-center text-blue-900 font-semibold hover:text-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-light transition-colors group"
             >
               {dict.home.viewAll}
-              <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Why Us Section */}
-      <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-navy py-28 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                {dict.home.whyUsTitle}
-              </h2>
-              <div className="mt-8 space-y-6">
-                {Object.entries(dict.about.valuesList).filter(([key]) => !key.endsWith("Text")).map(([key, value]) => {
-                  const textKey = `${key}Text` as keyof typeof dict.about.valuesList;
-                  return (
-                    <div key={key} className="flex gap-4">
-                      <div className="w-10 h-10 bg-blue-50 text-blue-900 rounded-lg flex items-center justify-center shrink-0 mt-1">
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900">{value}</h3>
-                        <p className="text-gray-500 text-sm mt-1">
-                          {dict.about.valuesList[textKey]}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
+              <AnimatedSection>
+                <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+                  {dict.home.whyUsTitle}
+                </span>
+                <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-white">
+                  {dict.home.whyUsTitle}
+                </h2>
+                <div className="gold-line mt-6" />
+              </AnimatedSection>
+
+              <div className="mt-10 space-y-6">
+                {Object.entries(dict.about.valuesList)
+                  .filter(([key]) => !key.endsWith("Text"))
+                  .map(([key, value], index) => {
+                    const textKey = `${key}Text` as keyof typeof dict.about.valuesList;
+                    return (
+                      <AnimatedSection key={key} delay={0.1 * index} direction="left">
+                        <div className="flex gap-4 group">
+                          <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold text-white text-lg">{value}</h3>
+                            <p className="text-gray-400 text-sm mt-1 leading-relaxed">
+                              {dict.about.valuesList[textKey]}
+                            </p>
+                          </div>
+                        </div>
+                      </AnimatedSection>
+                    );
+                  })}
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-950 to-blue-900 rounded-2xl p-12 text-white">
-              <h3 className="text-2xl font-bold mb-4">Saelacons</h3>
-              <p className="text-blue-200 leading-relaxed">
-                {dict.about.description}
-              </p>
-              <Link
-                href={`/${lang}/about`}
-                className="inline-flex items-center mt-8 text-white font-semibold hover:text-blue-200 transition-colors"
-              >
-                {dict.hero.learnMore}
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
+
+            <AnimatedSection direction="right" delay={0.3}>
+              <div className="relative">
+                {/* Image card */}
+                <div className="relative rounded-2xl overflow-hidden img-zoom">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                    alt="Interior design project"
+                    width={600}
+                    height={450}
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
+                        <span className="text-navy-dark font-bold">S</span>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white">
+                        {lang === "ru" ? "ООО «САЭЛА»" : "SAELACONS"}
+                      </h3>
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+                      {dict.about.description}
+                    </p>
+                    <Link
+                      href={`/${lang}/about`}
+                      className="inline-flex items-center mt-4 text-gold font-semibold hover:text-gold-light transition-colors group"
+                    >
+                      {dict.hero.learnMore}
+                      <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+                {/* Decorative elements */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/20 rounded-2xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 border border-gold/10 rounded-xl -z-10" />
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-900 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            {dict.hero.cta}
-          </h2>
-          <p className="mt-4 text-blue-200 text-lg max-w-2xl mx-auto">
-            {dict.hero.subtitle}
-          </p>
-          <Link
-            href={`/${lang}/contact`}
-            className="inline-flex items-center mt-8 px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {dict.hero.cta}
-          </Link>
+      <section className="relative py-28 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+          alt="Renovation"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-navy-dark/85" />
+        <div className="absolute inset-0 particle-bg" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
+            <h2 className="text-3xl sm:text-5xl font-bold text-white">
+              {dict.hero.cta}
+            </h2>
+            <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+              {dict.hero.subtitle}
+            </p>
+            <Link
+              href={`/${lang}/contact`}
+              className="inline-flex items-center gap-2 mt-10 px-10 py-5 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-bold rounded-xl btn-glow hover:shadow-lg hover:shadow-gold/20 transition-all text-lg"
+            >
+              {dict.hero.cta}
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
     </>

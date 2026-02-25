@@ -7,130 +7,142 @@
     "contact": "İletişim"
   },
   "hero": {
-    "title": "İnşaat ve Mühendislik Danışmanlığında Güvenilir Çözüm Ortağınız",
-    "subtitle": "Saelacons olarak, projelerinizi en yüksek kalite standartlarında hayata geçiriyoruz. Uluslararası deneyimimiz ve uzman kadromuzla yanınızdayız.",
-    "cta": "Bizimle İletişime Geçin",
+    "title": "Moskova'da Profesyonel Tadilat ve Renovasyon Hizmetleri",
+    "subtitle": "SAELACONS olarak daireler, kafeler, mağazalar ve ticari alanlar için üst düzey tadilat ve ince işçilik hizmetleri sunuyoruz. Kaliteli malzeme, uzman ekip, zamanında teslim.",
+    "cta": "Ücretsiz Keşif Talep Edin",
     "learnMore": "Daha Fazla Bilgi"
   },
   "home": {
     "servicesTitle": "Hizmetlerimiz",
-    "servicesSubtitle": "Geniş yelpazede profesyonel danışmanlık hizmetleri sunuyoruz",
-    "projectsTitle": "Öne Çıkan Projeler",
-    "projectsSubtitle": "Başarıyla tamamladığımız projelerden bazıları",
-    "whyUsTitle": "Neden Saelacons?",
+    "servicesSubtitle": "Daire, kafe ve ticari alan tadilatında anahtar teslim çözümler",
+    "projectsTitle": "Tamamlanan Projeler",
+    "projectsSubtitle": "Gerçekleştirdiğimiz renovasyon projelerinden örnekler",
+    "whyUsTitle": "Neden SAELACONS?",
     "stats": {
       "projects": "Tamamlanan Proje",
-      "experience": "Yıllık Deneyim",
-      "clients": "Mutlu Müşteri",
-      "countries": "Ülkede Faaliyet"
+      "area": "m² Renovasyon Alanı",
+      "clients": "Memnun Müşteri",
+      "team": "Uzman Ekip Üyesi"
     },
-    "viewAll": "Tümünü Gör"
+    "viewAll": "Tüm Hizmetleri Gör"
   },
   "about": {
     "title": "Hakkımızda",
-    "subtitle": "Saelacons — Güvenilir Mühendislik Danışmanlığı",
-    "description": "Saelacons, inşaat ve mühendislik sektöründe uluslararası standartlarda danışmanlık hizmeti sunan bir firmadır. Deneyimli mühendis kadromuz ile projelerinizin her aşamasında yanınızdayız.",
+    "subtitle": "SAELACONS — Moskova'da Güvenilir Tadilat Ortağınız",
+    "description": "ООО «САЭЛА» (SAELACONS), Moskova'da daire, kafe, restoran ve ticari mekan tadilatı konusunda profesyonel hizmet sunan bir firmadır. Deneyimli usta kadromuz ve kaliteli malzeme kullanımıyla, yaşam ve çalışma alanlarınızı hayalinizdeki mekanlara dönüştürüyoruz. Her projede detaylara gösterdiğimiz özen ve müşteri memnuniyetini ön planda tutan yaklaşımımızla fark yaratıyoruz.",
     "mission": "Misyonumuz",
-    "missionText": "Müşterilerimizin projelerini en yüksek kalite, güvenlik ve sürdürülebilirlik standartlarında hayata geçirmektir.",
+    "missionText": "Her mekanı, sahibinin hayalindeki konfor ve estetiğe kavuşturmak. Kaliteden ödün vermeden, bütçeye uygun ve zamanında tadilat çözümleri sunmak.",
     "vision": "Vizyonumuz",
-    "visionText": "İnşaat danışmanlığı alanında uluslararası arenada lider bir firma olmak ve sektöre yenilikçi çözümler sunmaktır.",
+    "visionText": "Moskova'nın en güvenilir ve tercih edilen tadilat firması olarak, Türk işçiliğinin kalitesini Rusya'da temsil etmek.",
     "values": "Değerlerimiz",
     "valuesList": {
-      "quality": "Kalite",
-      "qualityText": "Her projede en yüksek standartları hedefliyoruz.",
+      "quality": "Kaliteli İşçilik",
+      "qualityText": "Her detayda mükemmelliği hedefliyoruz. İnce işçiliğimiz farkımızdır.",
       "trust": "Güvenilirlik",
-      "trustText": "Şeffaf ve dürüst iş süreçleri ile güven inşa ediyoruz.",
-      "innovation": "Yenilikçilik",
-      "innovationText": "Modern teknoloji ve yöntemlerle fark yaratıyoruz.",
-      "sustainability": "Sürdürülebilirlik",
-      "sustainabilityText": "Çevreye duyarlı, geleceğe yönelik çözümler üretiyoruz."
+      "trustText": "Söz verdiğimiz tarihte, söz verdiğimiz kalitede teslim ediyoruz.",
+      "innovation": "Modern Yaklaşım",
+      "innovationText": "Güncel tasarım trendleri ve kaliteli malzemelerle çalışıyoruz.",
+      "sustainability": "Şeffaf Fiyatlandırma",
+      "sustainabilityText": "Gizli maliyet yok. Baştan net fiyat, sürpriz yok."
     }
   },
   "services": {
     "title": "Hizmetlerimiz",
-    "subtitle": "Kapsamlı mühendislik ve danışmanlık çözümleri",
+    "subtitle": "Daireden kafeye, mağazadan restorana — her mekan için profesyonel tadilat",
     "list": {
-      "projectManagement": {
-        "title": "Proje Yönetimi",
-        "description": "Projelerinizin başlangıçtan tamamlanmasına kadar tüm süreçlerini profesyonel olarak yönetiyoruz."
+      "apartmentRenovation": {
+        "title": "Daire Tadilatı",
+        "description": "Stüdyo daireden geniş dairelere kadar komple veya kısmi tadilat. Duvar, zemin, tavan, boya, alçı ve tüm ince işler dahil."
       },
-      "structuralEngineering": {
-        "title": "Yapısal Mühendislik",
-        "description": "Güvenli ve dayanıklı yapılar için detaylı yapısal analiz ve tasarım hizmetleri sunuyoruz."
+      "commercialRenovation": {
+        "title": "Ticari Mekan Tadilatı",
+        "description": "Mağaza, ofis ve AVM içi mekan tadilatları. Müşterilerinizi etkileyecek modern ve fonksiyonel alanlar oluşturuyoruz."
       },
-      "qualityControl": {
-        "title": "Kalite Kontrol",
-        "description": "Uluslararası standartlara uygun kalite kontrol ve denetim hizmetleri sağlıyoruz."
+      "cafeRestaurant": {
+        "title": "Kafe & Restoran Tadilatı",
+        "description": "Atmosfer yaratan iç mekan tasarımı ve uygulaması. Mutfak alanları dahil anahtar teslim kafe ve restoran renovasyonu."
       },
-      "consulting": {
-        "title": "Teknik Danışmanlık",
-        "description": "İnşaat projeleriniz için kapsamlı teknik danışmanlık ve fizibilite çalışmaları yapıyoruz."
+      "finishingWork": {
+        "title": "İnce İşler & Çistovaya",
+        "description": "Boya, alçıpan, seramik, parke, duvar kağıdı ve dekoratif kaplama işleri. Detaycı yaklaşımla kusursuz sonuçlar."
       },
-      "supervision": {
-        "title": "Şantiye Denetimi",
-        "description": "Şantiye süreçlerinin güvenlik ve kalite standartlarına uygunluğunu denetliyoruz."
+      "bathroomKitchen": {
+        "title": "Banyo & Mutfak Renovasyonu",
+        "description": "Tam donanımlı banyo ve mutfak yenileme. Tesisat, fayans, dolap montajı ve tüm detaylar dahil."
       },
-      "design": {
-        "title": "Tasarım Hizmetleri",
-        "description": "Modern ve işlevsel mimari ile mühendislik tasarım çözümleri sunuyoruz."
+      "designPlanning": {
+        "title": "Tasarım & Planlama",
+        "description": "Mekanınız için ücretsiz keşif ve proje planlama. İhtiyaçlarınıza uygun tasarım önerileri sunuyoruz."
       }
     }
   },
   "projects": {
     "title": "Projelerimiz",
-    "subtitle": "Başarıyla tamamladığımız projeler",
+    "subtitle": "Tamamladığımız renovasyon projelerinden örnekler",
     "category": "Kategori",
     "location": "Konum",
     "year": "Yıl",
     "list": {
       "project1": {
-        "title": "Konut Kompleksi",
-        "description": "500 daireli modern konut kompleksi proje yönetimi ve denetimi.",
-        "category": "Konut",
-        "location": "İstanbul, Türkiye"
+        "title": "3 Odalı Daire Komple Tadilatı",
+        "description": "85 m² dairede komple tadilat: zemin döşeme, duvar boyama, banyo ve mutfak yenileme, aydınlatma ve elektrik işleri.",
+        "category": "Daire",
+        "location": "Presnensky, Moskova"
       },
       "project2": {
-        "title": "Ticaret Merkezi",
-        "description": "30.000 m² kapalı alanlı ticaret merkezi yapısal mühendislik danışmanlığı.",
-        "category": "Ticari",
-        "location": "Moskova, Rusya"
+        "title": "Butik Kafe İç Mekan Tasarımı",
+        "description": "120 m² kafe alanında sıfırdan iç mekan oluşturma. Endüstriyel-modern tarz, özel aydınlatma ve mobilya yerleşimi.",
+        "category": "Kafe",
+        "location": "Arbat, Moskova"
       },
       "project3": {
-        "title": "Sanayi Tesisi",
-        "description": "Uluslararası standartlarda sanayi tesisi kalite kontrol ve denetim hizmeti.",
-        "category": "Endüstriyel",
-        "location": "Ankara, Türkiye"
+        "title": "AVM Mağaza Renovasyonu",
+        "description": "200 m² perakende alanı için modern mağaza konsepti. Vitrin tasarımı, zemin ve tavan işleri, aydınlatma sistemi.",
+        "category": "Ticari",
+        "location": "Aviapark, Moskova"
       },
       "project4": {
-        "title": "Altyapı Projesi",
-        "description": "Şehir altyapı yenileme projesi teknik danışmanlık hizmeti.",
-        "category": "Altyapı",
-        "location": "Bakü, Azerbaycan"
+        "title": "Stüdyo Daire Modernizasyonu",
+        "description": "42 m² stüdyo dairede akıllı alan kullanımı ile komple renovasyon. Minimalist tasarım, entegre depolama çözümleri.",
+        "category": "Daire",
+        "location": "Hamovniki, Moskova"
+      },
+      "project5": {
+        "title": "Restoran Yenileme Projesi",
+        "description": "180 m² restoran alanında komple yenileme. Mutfak alanı dahil, modern Rus-Türk füzyon konseptinde tasarım.",
+        "category": "Restoran",
+        "location": "Patriarşi Prudı, Moskova"
+      },
+      "project6": {
+        "title": "Modern Ofis Tadilatı",
+        "description": "150 m² ofis alanında modern çalışma ortamı oluşturma. Açık ofis planı, toplantı odaları ve dinlenme alanı.",
+        "category": "Ofis",
+        "location": "Moskova-Siti, Moskova"
       }
     }
   },
   "contact": {
     "title": "İletişim",
-    "subtitle": "Projeleriniz için bizimle iletişime geçin",
+    "subtitle": "Ücretsiz keşif ve fiyat teklifi için bize ulaşın",
     "form": {
       "name": "Adınız Soyadınız",
       "email": "E-posta Adresiniz",
       "phone": "Telefon Numaranız",
-      "subject": "Konu",
-      "message": "Mesajınız",
-      "send": "Gönder"
+      "subject": "Tadilat Türü",
+      "message": "Projeniz Hakkında Bilgi",
+      "send": "Teklif İste"
     },
     "info": {
       "address": "Adres",
-      "addressText": "İstanbul, Türkiye",
+      "addressText": "Moskova, Rusya",
       "phone": "Telefon",
-      "phoneText": "+90 (212) 000 00 00",
+      "phoneText": "+7 (938) 303-33-01",
       "email": "E-posta",
       "emailText": "info@saelacons.net"
     }
   },
   "footer": {
-    "description": "Saelacons — İnşaat ve mühendislik danışmanlığında güvenilir çözüm ortağınız.",
+    "description": "SAELACONS — Moskova'da daire, kafe ve ticari mekan tadilatında güvenilir çözüm ortağınız.",
     "quickLinks": "Hızlı Bağlantılar",
     "contactInfo": "İletişim Bilgileri",
     "rights": "Tüm hakları saklıdır."
