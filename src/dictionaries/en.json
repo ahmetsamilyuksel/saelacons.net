@@ -29,7 +29,7 @@
   "about": {
     "title": "About Us",
     "subtitle": "Saelacons — Trusted Engineering Consultancy",
-    "description": "Saelacons is a firm that provides consulting services in the construction and engineering sector at international standards. With our experienced team of engineers, we are with you at every stage of your projects.",
+    "description": "LLC «SAELA» (Saelacons) is a Moscow-based firm providing consulting services in the construction and engineering sector at international standards. With our experienced team of engineers, we are with you at every stage of your projects.",
     "mission": "Our Mission",
     "missionText": "To bring our clients' projects to life with the highest standards of quality, safety, and sustainability.",
     "vision": "Our Vision",
@@ -122,9 +122,9 @@
     },
     "info": {
       "address": "Address",
-      "addressText": "Istanbul, Turkey",
+      "addressText": "Moscow, Russia",
       "phone": "Phone",
-      "phoneText": "+90 (212) 000 00 00",
+      "phoneText": "+7 (938) 303-33-01",
       "email": "Email",
       "emailText": "info@saelacons.net"
     }

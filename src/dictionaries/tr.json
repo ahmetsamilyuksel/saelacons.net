@@ -29,7 +29,7 @@
   "about": {
     "title": "Hakkımızda",
     "subtitle": "Saelacons — Güvenilir Mühendislik Danışmanlığı",
-    "description": "Saelacons, inşaat ve mühendislik sektöründe uluslararası standartlarda danışmanlık hizmeti sunan bir firmadır. Deneyimli mühendis kadromuz ile projelerinizin her aşamasında yanınızdayız.",
+    "description": "ООО «САЭЛА» (Saelacons), inşaat ve mühendislik sektöründe uluslararası standartlarda danışmanlık hizmeti sunan bir firmadır. Moskova merkezli şirketimiz, deneyimli mühendis kadrosuyla projelerinizin her aşamasında yanınızdadır.",
     "mission": "Misyonumuz",
     "missionText": "Müşterilerimizin projelerini en yüksek kalite, güvenlik ve sürdürülebilirlik standartlarında hayata geçirmektir.",
     "vision": "Vizyonumuz",
@@ -122,9 +122,9 @@
     },
     "info": {
       "address": "Adres",
-      "addressText": "İstanbul, Türkiye",
+      "addressText": "Moskova, Rusya",
       "phone": "Telefon",
-      "phoneText": "+90 (212) 000 00 00",
+      "phoneText": "+7 (938) 303-33-01",
       "email": "E-posta",
       "emailText": "info@saelacons.net"
     }
