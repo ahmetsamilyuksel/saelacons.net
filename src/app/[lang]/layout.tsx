@@ -4,6 +4,7 @@ import { i18n, Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "SAELACONS — Ремонт квартир, кафе и коммерческих помещений в Москве",
@@ -32,6 +33,7 @@ export default async function LangLayout({
         <Header lang={lang} dict={dict} />
         <main className="pt-20">{children}</main>
         <Footer lang={lang} dict={dict} />
+        <ChatWidget dict={dict} />
       </body>
     </html>
   );

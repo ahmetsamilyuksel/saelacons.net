@@ -14,7 +14,6 @@ interface FooterProps {
       services: string;
       projects: string;
       contact: string;
-      pricing?: string;
     };
     footer: {
       description: string;
@@ -40,7 +39,6 @@ export default function Footer({ lang, dict }: FooterProps) {
     { href: `/${lang}/about`, label: dict.nav.about },
     { href: `/${lang}/services`, label: dict.nav.services },
     { href: `/${lang}/projects`, label: dict.nav.projects },
-    { href: `/${lang}/pricing`, label: dict.nav.pricing || "Pricing" },
     { href: `/${lang}/contact`, label: dict.nav.contact },
   ];
 
@@ -61,12 +59,12 @@ export default function Footer({ lang, dict }: FooterProps) {
               <Image
                 src="/images/amin logo arka plan şeffaf 3d.png"
                 alt="Saelacons Logo"
-                width={48}
-                height={48}
-                className="w-12 h-12 object-contain"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-contain"
               />
               <span className="text-xl font-bold tracking-wider text-white">
-                {lang === "ru" ? "САЭЛА" : "SAELA"}<span className="text-gold">{lang === "ru" ? "КОНС" : "CONS"}</span>
+                {lang === "ru" ? "САЭЛА" : "SAELA"}{lang !== "ru" && <span className="text-gold">CONS</span>}
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

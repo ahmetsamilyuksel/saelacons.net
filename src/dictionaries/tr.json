@@ -141,6 +141,15 @@
       "emailText": "info@saelacons.net"
     }
   },
+  "chat": {
+    "title": "Tadilat mı planlıyorsunuz?",
+    "subtitle": "Bizimle iletişime geçin — hemen dönüş yapalım",
+    "cta": "Ücretsiz Keşif Talep Edin",
+    "whatsapp": "WhatsApp'tan Yazın",
+    "telegram": "Telegram'dan Yazın",
+    "call": "Bizi Arayın",
+    "close": "Kapat"
+  },
   "footer": {
     "description": "SAELACONS — Moskova'da daire, kafe ve ticari mekan tadilatında güvenilir çözüm ortağınız.",
     "quickLinks": "Hızlı Bağlantılar",

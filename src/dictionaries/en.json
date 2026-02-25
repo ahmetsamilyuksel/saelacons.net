@@ -141,6 +141,15 @@
       "emailText": "info@saelacons.net"
     }
   },
+  "chat": {
+    "title": "Need renovation help?",
+    "subtitle": "Get in touch with us — we'll respond right away",
+    "cta": "Request a Free Consultation",
+    "whatsapp": "Write on WhatsApp",
+    "telegram": "Write on Telegram",
+    "call": "Call Us",
+    "close": "Close"
+  },
   "footer": {
     "description": "SAELACONS — Your trusted partner for apartment, cafe, and commercial renovation in Moscow.",
     "quickLinks": "Quick Links",
