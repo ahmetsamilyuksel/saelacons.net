@@ -1,6 +1,7 @@
 import { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import AnimatedSection from "@/components/AnimatedSection";
+import ContactForm from "@/components/ContactForm";
 
 export default async function ContactPage({
   params,
@@ -19,8 +20,8 @@ export default async function ContactPage({
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(30,64,175,0.3) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(30,64,175,0.3) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",
           }}
         />
@@ -49,71 +50,7 @@ export default async function ContactPage({
             {/* Contact Form */}
             <AnimatedSection direction="left">
               <div className="glass rounded-2xl p-8 sm:p-10">
-                <form className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        {dict.contact.form.name}
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 transition-all"
-                        placeholder={dict.contact.form.name}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        {dict.contact.form.email}
-                      </label>
-                      <input
-                        type="email"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 transition-all"
-                        placeholder={dict.contact.form.email}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        {dict.contact.form.phone}
-                      </label>
-                      <input
-                        type="tel"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 transition-all"
-                        placeholder={dict.contact.form.phone}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        {dict.contact.form.subject}
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 transition-all"
-                        placeholder={dict.contact.form.subject}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      {dict.contact.form.message}
-                    </label>
-                    <textarea
-                      rows={6}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 transition-all resize-none"
-                      placeholder={dict.contact.form.message}
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold rounded-xl btn-glow hover:shadow-lg hover:shadow-gold/20 transition-all"
-                  >
-                    {dict.contact.form.send}
-                  </button>
-                </form>
+                <ContactForm dict={dict} />
               </div>
             </AnimatedSection>
 
