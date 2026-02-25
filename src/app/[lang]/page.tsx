@@ -122,17 +122,16 @@ export default async function HomePage({
       </section>
 
       {/* Stats Section */}
-      <section className="relative bg-navy-dark py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy via-transparent to-navy" />
+      <section className="relative bg-slate-50 py-20 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.15}>
             {stats.map((stat) => (
               <StaggerItem key={stat.label}>
-                <div className="text-center glass rounded-2xl p-8">
-                  <div className="text-4xl sm:text-5xl font-bold gradient-text">
+                <div className="text-center bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                  <div className="text-4xl sm:text-5xl font-bold text-blue-600">
                     <CountUpNumber target={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div className="mt-3 text-sm text-gray-400 font-medium tracking-wide uppercase">
+                  <div className="mt-3 text-sm text-slate-500 font-medium tracking-wide uppercase">
                     {stat.label}
                   </div>
                 </div>
@@ -154,13 +153,13 @@ export default async function HomePage({
       </section>
 
       {/* Services Preview */}
-      <section className="relative bg-navy-dark py-28 overflow-hidden">
+      <section className="relative bg-white py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+            <span className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
               {dict.home.servicesTitle}
             </span>
-            <h2 className="mt-4 text-3xl sm:text-5xl font-bold text-white">
+            <h2 className="mt-4 text-3xl sm:text-5xl font-bold text-slate-900">
               {dict.home.servicesSubtitle}
             </h2>
             <div className="gold-line mx-auto mt-6" />
@@ -171,16 +170,16 @@ export default async function HomePage({
               const s = serviceDict[service.key];
               return (
                 <StaggerItem key={service.key}>
-                  <div className="group glass rounded-2xl p-8 card-hover h-full">
-                    <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                  <div className="group bg-slate-50 hover:bg-white rounded-2xl p-8 card-hover h-full border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+                    <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={service.icon} />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gold transition-colors">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {s.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-slate-500 leading-relaxed">
                       {s.description}
                     </p>
                   </div>
@@ -192,7 +191,7 @@ export default async function HomePage({
           <AnimatedSection className="text-center mt-12">
             <Link
               href={`/${lang}/services`}
-              className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-light transition-colors group"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group"
             >
               {dict.home.viewAll}
               <svg className="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,18 +203,17 @@ export default async function HomePage({
       </section>
 
       {/* Why Us Section */}
-      <section className="relative bg-navy py-28 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
+      <section className="relative bg-slate-50 py-28 overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <AnimatedSection>
-                <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+                <span className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
                   {dict.home.whyUsTitle}
                 </span>
-                <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-white">
+                <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-slate-900">
                   {dict.home.whyUsTitle}
                 </h2>
                 <div className="gold-line mt-6" />
@@ -229,14 +227,14 @@ export default async function HomePage({
                     return (
                       <AnimatedSection key={key} delay={0.1 * index} direction="left">
                         <div className="flex gap-4 group">
-                          <div className="w-12 h-12 bg-gold/10 text-gold rounded-xl flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                          <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <div>
-                            <h3 className="font-semibold text-white text-lg">{value}</h3>
-                            <p className="text-gray-400 text-sm mt-1 leading-relaxed">
+                            <h3 className="font-semibold text-slate-900 text-lg">{value}</h3>
+                            <p className="text-slate-500 text-sm mt-1 leading-relaxed">
                               {dict.about.valuesList[textKey]}
                             </p>
                           </div>

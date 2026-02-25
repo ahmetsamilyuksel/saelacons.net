@@ -65,20 +65,20 @@ export default async function ServicesPage({
       </section>
 
       {/* Services Grid */}
-      <section className="bg-navy py-28">
+      <section className="bg-white py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.1}>
             {Object.entries(servicesList).map(([key, service], index) => (
               <StaggerItem key={key}>
-                <div className="group glass rounded-2xl p-8 card-hover h-full relative overflow-hidden">
+                <div className="group bg-slate-50 hover:bg-white rounded-2xl p-8 card-hover h-full relative overflow-hidden border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
                   {/* Background number */}
-                  <span className="absolute -top-4 -right-2 text-[120px] font-bold text-white/[0.02] leading-none select-none">
+                  <span className="absolute -top-4 -right-2 text-[120px] font-bold text-slate-100 leading-none select-none">
                     {serviceNumbers[index] || "00"}
                   </span>
 
                   <div className="relative">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                      <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                         <svg
                           className="w-7 h-7"
                           fill="none"
@@ -93,19 +93,19 @@ export default async function ServicesPage({
                           />
                         </svg>
                       </div>
-                      <span className="text-gold/30 text-sm font-mono">
+                      <span className="text-slate-300 text-sm font-mono">
                         {serviceNumbers[index] || "00"}
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-gold transition-colors">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="text-slate-500 leading-relaxed">
                       {service.description}
                     </p>
 
                     {/* Hover line */}
-                    <div className="mt-6 w-0 group-hover:w-full h-px bg-gradient-to-r from-gold to-transparent transition-all duration-500" />
+                    <div className="mt-6 w-0 group-hover:w-full h-px bg-gradient-to-r from-blue-500 to-transparent transition-all duration-500" />
                   </div>
                 </div>
               </StaggerItem>

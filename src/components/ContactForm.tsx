@@ -83,117 +83,116 @@ export default function ContactForm({ dict }: ContactFormProps) {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-slate-700 mb-2">
             {dict.contact.form.name}
           </label>
           <input
             name="name"
             type="text"
             required
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all outline-none"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all outline-none"
             placeholder={dict.contact.form.name}
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
+          <label className="block text-sm font-medium text-slate-700 mb-2">
             {dict.contact.form.email}
           </label>
           <input
             name="email"
             type="email"
             required
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all outline-none"
+            className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all outline-none"
             placeholder={dict.contact.form.email}
           />
         </div>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6">
-        {/* Phone with country code */}
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            {dict.contact.form.phone}
-          </label>
-          <div className="flex gap-2">
-            {/* Country code selector */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setCodeOpen(!codeOpen)}
-                className="flex items-center gap-1.5 px-3 py-3 bg-white/5 border border-white/10 rounded-xl text-white hover:border-gold/30 transition-all h-full min-w-[90px]"
-              >
-                <span className="text-base">{selectedCountry?.flag}</span>
-                <span className="text-sm">{selectedCode}</span>
-                <svg className={`w-3 h-3 text-gray-400 transition-transform ${codeOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+      {/* Phone with country code - full width */}
+      <div>
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          {dict.contact.form.phone}
+        </label>
+        <div className="flex gap-2">
+          {/* Country code selector */}
+          <div className="relative shrink-0">
+            <button
+              type="button"
+              onClick={() => setCodeOpen(!codeOpen)}
+              className="flex items-center gap-1.5 px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 hover:border-blue-300 transition-all h-full"
+            >
+              <span className="text-base">{selectedCountry?.flag}</span>
+              <span className="text-sm">{selectedCode}</span>
+              <svg className={`w-3 h-3 text-slate-400 transition-transform ${codeOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
 
-              <AnimatePresence>
-                {codeOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -5 }}
-                    transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-1 w-36 glass-dark rounded-xl border border-white/10 shadow-2xl shadow-black/50 z-50 max-h-48 overflow-y-auto"
-                  >
-                    {countryCodes.map((c) => (
-                      <button
-                        key={c.code}
-                        type="button"
-                        onClick={() => {
-                          setSelectedCode(c.code);
-                          setCodeOpen(false);
-                        }}
-                        className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-white/10 transition-colors ${
-                          selectedCode === c.code ? "text-gold" : "text-gray-300"
-                        }`}
-                      >
-                        <span>{c.flag}</span>
-                        <span>{c.country}</span>
-                        <span className="text-gray-500 ml-auto">{c.code}</span>
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Phone number */}
-            <input
-              type="tel"
-              required
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all outline-none"
-            />
+            <AnimatePresence>
+              {codeOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -5 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute top-full left-0 mt-1 w-36 bg-white rounded-xl border border-slate-200 shadow-xl shadow-slate-200/50 z-50 max-h-48 overflow-y-auto"
+                >
+                  {countryCodes.map((c) => (
+                    <button
+                      key={c.code}
+                      type="button"
+                      onClick={() => {
+                        setSelectedCode(c.code);
+                        setCodeOpen(false);
+                      }}
+                      className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-slate-50 transition-colors ${
+                        selectedCode === c.code ? "text-blue-600" : "text-slate-700"
+                      }`}
+                    >
+                      <span>{c.flag}</span>
+                      <span>{c.country}</span>
+                      <span className="text-slate-400 ml-auto">{c.code}</span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-        </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            {dict.contact.form.subject}
-          </label>
+          {/* Phone number */}
           <input
-            name="subject"
-            type="text"
+            type="tel"
             required
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all outline-none"
-            placeholder={dict.contact.form.subject}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="flex-1 min-w-0 px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all outline-none"
           />
         </div>
       </div>
 
+      {/* Subject - full width */}
       <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          {dict.contact.form.subject}
+        </label>
+        <input
+          name="subject"
+          type="text"
+          required
+          className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all outline-none"
+          placeholder={dict.contact.form.subject}
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-slate-700 mb-2">
           {dict.contact.form.message}
         </label>
         <textarea
           name="message"
           rows={6}
           required
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all resize-none outline-none"
+          className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all resize-none outline-none"
           placeholder={dict.contact.form.message}
         />
       </div>
