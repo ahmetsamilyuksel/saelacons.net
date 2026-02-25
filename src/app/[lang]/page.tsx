@@ -58,8 +58,8 @@ export default async function HomePage({
         {/* Animated grid overlay */}
         <div className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: `linear-gradient(rgba(30,64,175,0.3) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(30,64,175,0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(59,130,246,0.3) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",
           }}
         />
@@ -95,7 +95,7 @@ export default async function HomePage({
               <div className="mt-12 flex flex-wrap gap-4">
                 <Link
                   href={`/${lang}/contact`}
-                  className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold rounded-xl btn-glow transition-all hover:shadow-lg hover:shadow-gold/20"
+                  className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
                 >
                   {dict.hero.cta}
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,7 +104,7 @@ export default async function HomePage({
                 </Link>
                 <Link
                   href={`/${lang}/services`}
-                  className="inline-flex items-center gap-2 px-8 py-4 glass text-white font-semibold rounded-xl hover:bg-white/10 transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 hover:border-white/30 transition-all"
                 >
                   {dict.hero.learnMore}
                 </Link>
@@ -304,7 +304,7 @@ export default async function HomePage({
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-navy-dark/85" />
+        <div className="absolute inset-0 bg-navy-dark/75" />
         <div className="absolute inset-0 particle-bg" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -317,7 +317,7 @@ export default async function HomePage({
             </p>
             <Link
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 mt-10 px-10 py-5 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-bold rounded-xl btn-glow hover:shadow-lg hover:shadow-gold/20 transition-all text-lg"
+              className="inline-flex items-center gap-2 mt-10 px-10 py-5 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 text-lg"
             >
               {dict.hero.cta}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
