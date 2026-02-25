@@ -167,7 +167,6 @@ export default function ContactForm({ dict }: ContactFormProps) {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 transition-all outline-none"
-              placeholder="(938) 303-33-01"
             />
           </div>
         </div>
@@ -232,7 +231,7 @@ export default function ContactForm({ dict }: ContactFormProps) {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-navy-dark font-semibold rounded-xl btn-glow hover:shadow-lg hover:shadow-gold/20 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full py-4 bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 text-white font-bold text-lg rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
       >
         {status === "sending" ? dict.contact.form.sending : dict.contact.form.send}
       </button>
