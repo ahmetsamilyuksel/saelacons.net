@@ -66,7 +66,7 @@ export default function Footer({ lang, dict }: FooterProps) {
                 className="w-12 h-12 object-contain"
               />
               <span className="text-xl font-bold tracking-wider text-white">
-                {lang === "ru" ? "САЭЛА" : "SAELA"}<span className="text-gold">{lang === "ru" ? "КОНС" : "CONS"}</span>
+                {lang === "ru" ? "САЭЛА" : "SAELA"}{lang !== "ru" && <span className="text-gold">CONS</span>}
               </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">

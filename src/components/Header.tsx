@@ -72,7 +72,7 @@ export default function Header({ lang, dict }: HeaderProps) {
               className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="text-xl font-bold tracking-wider text-white">
-              {lang === "ru" ? "САЭЛА" : "SAELA"}<span className="text-gold">{lang === "ru" ? "КОНС" : "CONS"}</span>
+              {lang === "ru" ? "САЭЛА" : "SAELA"}{lang !== "ru" && <span className="text-gold">CONS</span>}
             </span>
           </Link>
 
