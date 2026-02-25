@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your Trusted Partner in Construction and Engineering Consulting",
+    "subtitle": "At Saelacons, we bring your projects to life with the highest quality standards. We are by your side with our international experience and expert team.",
+    "cta": "Contact Us",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "servicesTitle": "Our Services",
+    "servicesSubtitle": "We offer a wide range of professional consulting services",
+    "projectsTitle": "Featured Projects",
+    "projectsSubtitle": "Some of our successfully completed projects",
+    "whyUsTitle": "Why Saelacons?",
+    "stats": {
+      "projects": "Completed Projects",
+      "experience": "Years of Experience",
+      "clients": "Happy Clients",
+      "countries": "Countries of Operation"
+    },
+    "viewAll": "View All"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Saelacons — Trusted Engineering Consultancy",
+    "description": "Saelacons is a firm that provides consulting services in the construction and engineering sector at international standards. With our experienced team of engineers, we are with you at every stage of your projects.",
+    "mission": "Our Mission",
+    "missionText": "To bring our clients' projects to life with the highest standards of quality, safety, and sustainability.",
+    "vision": "Our Vision",
+    "visionText": "To become a leading firm in the international arena of construction consultancy and to offer innovative solutions to the industry.",
+    "values": "Our Values",
+    "valuesList": {
+      "quality": "Quality",
+      "qualityText": "We aim for the highest standards in every project.",
+      "trust": "Reliability",
+      "trustText": "We build trust with transparent and honest business processes.",
+      "innovation": "Innovation",
+      "innovationText": "We make a difference with modern technology and methods.",
+      "sustainability": "Sustainability",
+      "sustainabilityText": "We create environmentally conscious, future-oriented solutions."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive engineering and consulting solutions",
+    "list": {
+      "projectManagement": {
+        "title": "Project Management",
+        "description": "We professionally manage all processes of your projects from start to completion."
+      },
+      "structuralEngineering": {
+        "title": "Structural Engineering",
+        "description": "We offer detailed structural analysis and design services for safe and durable structures."
+      },
+      "qualityControl": {
+        "title": "Quality Control",
+        "description": "We provide quality control and inspection services compliant with international standards."
+      },
+      "consulting": {
+        "title": "Technical Consulting",
+        "description": "We provide comprehensive technical consulting and feasibility studies for your construction projects."
+      },
+      "supervision": {
+        "title": "Site Supervision",
+        "description": "We supervise construction site processes for compliance with safety and quality standards."
+      },
+      "design": {
+        "title": "Design Services",
+        "description": "We offer modern and functional architectural and engineering design solutions."
+      }
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Successfully completed projects",
+    "category": "Category",
+    "location": "Location",
+    "year": "Year",
+    "list": {
+      "project1": {
+        "title": "Residential Complex",
+        "description": "Project management and supervision of a modern 500-unit residential complex.",
+        "category": "Residential",
+        "location": "Istanbul, Turkey"
+      },
+      "project2": {
+        "title": "Shopping Center",
+        "description": "Structural engineering consultancy for a 30,000 m² enclosed shopping center.",
+        "category": "Commercial",
+        "location": "Moscow, Russia"
+      },
+      "project3": {
+        "title": "Industrial Facility",
+        "description": "Quality control and inspection service for an international standards industrial facility.",
+        "category": "Industrial",
+        "location": "Ankara, Turkey"
+      },
+      "project4": {
+        "title": "Infrastructure Project",
+        "description": "Technical consulting service for urban infrastructure renovation project.",
+        "category": "Infrastructure",
+        "location": "Baku, Azerbaijan"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch with us for your projects",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send"
+    },
+    "info": {
+      "address": "Address",
+      "addressText": "Istanbul, Turkey",
+      "phone": "Phone",
+      "phoneText": "+90 (212) 000 00 00",
+      "email": "Email",
+      "emailText": "info@saelacons.net"
+    }
+  },
+  "footer": {
+    "description": "Saelacons — Your trusted partner in construction and engineering consulting.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "İnşaat ve Mühendislik Danışmanlığında Güvenilir Çözüm Ortağınız",
+    "subtitle": "Saelacons olarak, projelerinizi en yüksek kalite standartlarında hayata geçiriyoruz. Uluslararası deneyimimiz ve uzman kadromuzla yanınızdayız.",
+    "cta": "Bizimle İletişime Geçin",
+    "learnMore": "Daha Fazla Bilgi"
+  },
+  "home": {
+    "servicesTitle": "Hizmetlerimiz",
+    "servicesSubtitle": "Geniş yelpazede profesyonel danışmanlık hizmetleri sunuyoruz",
+    "projectsTitle": "Öne Çıkan Projeler",
+    "projectsSubtitle": "Başarıyla tamamladığımız projelerden bazıları",
+    "whyUsTitle": "Neden Saelacons?",
+    "stats": {
+      "projects": "Tamamlanan Proje",
+      "experience": "Yıllık Deneyim",
+      "clients": "Mutlu Müşteri",
+      "countries": "Ülkede Faaliyet"
+    },
+    "viewAll": "Tümünü Gör"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "subtitle": "Saelacons — Güvenilir Mühendislik Danışmanlığı",
+    "description": "Saelacons, inşaat ve mühendislik sektöründe uluslararası standartlarda danışmanlık hizmeti sunan bir firmadır. Deneyimli mühendis kadromuz ile projelerinizin her aşamasında yanınızdayız.",
+    "mission": "Misyonumuz",
+    "missionText": "Müşterilerimizin projelerini en yüksek kalite, güvenlik ve sürdürülebilirlik standartlarında hayata geçirmektir.",
+    "vision": "Vizyonumuz",
+    "visionText": "İnşaat danışmanlığı alanında uluslararası arenada lider bir firma olmak ve sektöre yenilikçi çözümler sunmaktır.",
+    "values": "Değerlerimiz",
+    "valuesList": {
+      "quality": "Kalite",
+      "qualityText": "Her projede en yüksek standartları hedefliyoruz.",
+      "trust": "Güvenilirlik",
+      "trustText": "Şeffaf ve dürüst iş süreçleri ile güven inşa ediyoruz.",
+      "innovation": "Yenilikçilik",
+      "innovationText": "Modern teknoloji ve yöntemlerle fark yaratıyoruz.",
+      "sustainability": "Sürdürülebilirlik",
+      "sustainabilityText": "Çevreye duyarlı, geleceğe yönelik çözümler üretiyoruz."
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Kapsamlı mühendislik ve danışmanlık çözümleri",
+    "list": {
+      "projectManagement": {
+        "title": "Proje Yönetimi",
+        "description": "Projelerinizin başlangıçtan tamamlanmasına kadar tüm süreçlerini profesyonel olarak yönetiyoruz."
+      },
+      "structuralEngineering": {
+        "title": "Yapısal Mühendislik",
+        "description": "Güvenli ve dayanıklı yapılar için detaylı yapısal analiz ve tasarım hizmetleri sunuyoruz."
+      },
+      "qualityControl": {
+        "title": "Kalite Kontrol",
+        "description": "Uluslararası standartlara uygun kalite kontrol ve denetim hizmetleri sağlıyoruz."
+      },
+      "consulting": {
+        "title": "Teknik Danışmanlık",
+        "description": "İnşaat projeleriniz için kapsamlı teknik danışmanlık ve fizibilite çalışmaları yapıyoruz."
+      },
+      "supervision": {
+        "title": "Şantiye Denetimi",
+        "description": "Şantiye süreçlerinin güvenlik ve kalite standartlarına uygunluğunu denetliyoruz."
+      },
+      "design": {
+        "title": "Tasarım Hizmetleri",
+        "description": "Modern ve işlevsel mimari ile mühendislik tasarım çözümleri sunuyoruz."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projelerimiz",
+    "subtitle": "Başarıyla tamamladığımız projeler",
+    "category": "Kategori",
+    "location": "Konum",
+    "year": "Yıl",
+    "list": {
+      "project1": {
+        "title": "Konut Kompleksi",
+        "description": "500 daireli modern konut kompleksi proje yönetimi ve denetimi.",
+        "category": "Konut",
+        "location": "İstanbul, Türkiye"
+      },
+      "project2": {
+        "title": "Ticaret Merkezi",
+        "description": "30.000 m² kapalı alanlı ticaret merkezi yapısal mühendislik danışmanlığı.",
+        "category": "Ticari",
+        "location": "Moskova, Rusya"
+      },
+      "project3": {
+        "title": "Sanayi Tesisi",
+        "description": "Uluslararası standartlarda sanayi tesisi kalite kontrol ve denetim hizmeti.",
+        "category": "Endüstriyel",
+        "location": "Ankara, Türkiye"
+      },
+      "project4": {
+        "title": "Altyapı Projesi",
+        "description": "Şehir altyapı yenileme projesi teknik danışmanlık hizmeti.",
+        "category": "Altyapı",
+        "location": "Bakü, Azerbaycan"
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Projeleriniz için bizimle iletişime geçin",
+    "form": {
+      "name": "Adınız Soyadınız",
+      "email": "E-posta Adresiniz",
+      "phone": "Telefon Numaranız",
+      "subject": "Konu",
+      "message": "Mesajınız",
+      "send": "Gönder"
+    },
+    "info": {
+      "address": "Adres",
+      "addressText": "İstanbul, Türkiye",
+      "phone": "Telefon",
+      "phoneText": "+90 (212) 000 00 00",
+      "email": "E-posta",
+      "emailText": "info@saelacons.net"
+    }
+  },
+  "footer": {
+    "description": "Saelacons — İnşaat ve mühendislik danışmanlığında güvenilir çözüm ortağınız.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contactInfo": "İletişim Bilgileri",
+    "rights": "Tüm hakları saklıdır."
+  }
+}
