@@ -45,7 +45,7 @@ export default async function HomePage({
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+          src="/images/generated-Yan09zvbq5in8ywg.png"
           alt="Luxury interior"
           fill
           className="object-cover"
@@ -145,7 +145,7 @@ export default async function HomePage({
       {/* Featured Image Banner */}
       <section className="relative h-[50vh] overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+          src="/images/generated-YrD4NL72QeCrkMyy.png"
           alt="Modern interior design"
           fill
           className="object-cover"
@@ -252,7 +252,7 @@ export default async function HomePage({
                 {/* Image card */}
                 <div className="relative rounded-2xl overflow-hidden img-zoom">
                   <Image
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                    src="/images/generated-m5K8blOEyDHyJ56E.png"
                     alt="Interior design project"
                     width={600}
                     height={450}
@@ -261,9 +261,13 @@ export default async function HomePage({
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-dark rounded-lg flex items-center justify-center">
-                        <span className="text-navy-dark font-bold">S</span>
-                      </div>
+                      <Image
+                        src="/images/amin logo arka plan şeffaf 3d.png"
+                        alt="Saelacons Logo"
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 object-contain"
+                      />
                       <h3 className="text-2xl font-bold text-white">
                         {lang === "ru" ? "ООО «САЭЛА»" : "SAELACONS"}
                       </h3>
@@ -295,7 +299,7 @@ export default async function HomePage({
       <section className="relative py-28 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1920&q=80"
+          src="/images/generated-mP43QXRDx9UGDqV9.png"
           alt="Renovation"
           fill
           className="object-cover"

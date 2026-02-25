@@ -36,7 +36,7 @@ export default async function AboutPage({
       {/* Page Header */}
       <section className="relative bg-navy-dark py-32 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1920&q=80"
+          src="/images/generated-AE074q805Eua1Byq.png"
           alt="Modern architecture"
           fill
           className="object-cover opacity-20"
@@ -71,7 +71,7 @@ export default async function AboutPage({
             <AnimatedSection direction="right" delay={0.2}>
               <div className="relative rounded-2xl overflow-hidden img-zoom">
                 <Image
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+                  src="/images/generated-AE074vNGr4Fgoow3.png"
                   alt="Our work"
                   width={600}
                   height={400}

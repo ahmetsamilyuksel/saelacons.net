@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -61,12 +62,13 @@ export default function Header({ lang, dict }: HeaderProps) {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold to-gold-dark rounded-lg transform group-hover:rotate-6 transition-transform duration-300" />
-              <div className="relative w-full h-full flex items-center justify-center">
-                <span className="text-navy-dark font-bold text-lg">S</span>
-              </div>
-            </div>
+            <Image
+              src="/images/amin logo arka plan şeffaf 3d.png"
+              alt="Saelacons Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+            />
             <span className="text-xl font-bold tracking-wider text-white">
               SAELA<span className="text-gold">CONS</span>
             </span>
