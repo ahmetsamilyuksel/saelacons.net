@@ -60,11 +60,11 @@ export default async function AboutPage({
       </section>
 
       {/* Description with Image */}
-      <section className="bg-navy py-24">
+      <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="left">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed">
                 {dict.about.description}
               </p>
             </AnimatedSection>
@@ -85,22 +85,21 @@ export default async function AboutPage({
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-navy-dark py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <section className="bg-slate-50 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <AnimatedSection direction="left">
-              <div className="glass rounded-2xl p-10 h-full gradient-border">
+              <div className="bg-white rounded-2xl p-10 h-full border border-slate-100 shadow-sm">
                 <div className="relative">
-                  <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
                     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-4">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">
                     {dict.about.mission}
                   </h2>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-slate-500 leading-relaxed">
                     {dict.about.missionText}
                   </p>
                 </div>
@@ -108,18 +107,18 @@ export default async function AboutPage({
             </AnimatedSection>
 
             <AnimatedSection direction="right">
-              <div className="glass rounded-2xl p-10 h-full gradient-border">
+              <div className="bg-white rounded-2xl p-10 h-full border border-slate-100 shadow-sm">
                 <div className="relative">
-                  <div className="w-14 h-14 bg-gold/10 text-gold rounded-xl flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
                     <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-4">
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">
                     {dict.about.vision}
                   </h2>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-slate-500 leading-relaxed">
                     {dict.about.visionText}
                   </p>
                 </div>
@@ -130,16 +129,13 @@ export default async function AboutPage({
       </section>
 
       {/* Values */}
-      <section className="bg-navy py-24 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-gold/5 rounded-full blur-[100px] pointer-events-none" />
-
+      <section className="bg-white py-24 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-gold text-sm font-semibold uppercase tracking-widest">
+            <span className="text-blue-600 text-sm font-semibold uppercase tracking-widest">
               {dict.about.values}
             </span>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="mt-4 text-3xl sm:text-4xl font-bold text-slate-900">
               {dict.about.values}
             </h2>
             <div className="gold-line mx-auto mt-6" />
@@ -151,16 +147,16 @@ export default async function AboutPage({
               const textKey = `${v.key}Text` as keyof typeof dict.about.valuesList;
               return (
                 <StaggerItem key={v.key}>
-                  <div className="text-center group glass rounded-2xl p-8 card-hover h-full">
-                    <div className="w-16 h-16 bg-gold/10 text-gold rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300">
+                  <div className="text-center group bg-slate-50 hover:bg-white rounded-2xl p-8 card-hover h-full border border-slate-100 hover:border-blue-100 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+                    <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
                       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={v.icon} />
                       </svg>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-gold transition-colors">
+                    <h3 className="text-lg font-semibold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {dict.about.valuesList[titleKey]}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">
+                    <p className="text-slate-500 text-sm leading-relaxed">
                       {dict.about.valuesList[textKey]}
                     </p>
                   </div>
